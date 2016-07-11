@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.esciencecenter</groupId>
-    <artifactId>tycho-knime-node-archetype</artifactId>
+    <artifactId>knime-python-node-archetype</artifactId>
     <version>1.2.0</version>
-    <name>Archetype - Knime node</name>
+    <name>Archetype - Knime Python node</name>
     <packaging>maven-archetype</packaging>
     <licenses>
         <license>
@@ -13,19 +13,19 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:https://github.com/3D-e-Chem/tycho-knime-node-archetype.git</connection>
-        <developerConnection>scm:git:git@github.com:3D-e-Chem/tycho-knime-node-archetype.git</developerConnection>
-        <url>https://github.com/3D-e-Chem/tycho-knime-node-archetype</url>
+        <connection>scm:git:https://github.com/3D-e-Chem/knime-python-node-archetype.git</connection>
+        <developerConnection>scm:git:git@github.com:3D-e-Chem/knime-python-node-archetype.git</developerConnection>
+        <url>https://github.com/3D-e-Chem/knime-node-archetype</url>
         <tag>HEAD</tag>
     </scm>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/3D-e-Chem/tycho-knime-node-archetype/issues</url>
+        <url>https://github.com/3D-e-Chem/knime-python-node-archetype/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>Travis CI</system>
-        <url>http://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype</url>
+        <url>http://travis-ci.org/3D-e-Chem/knime-python-node-archetype</url>
     </ciManagement>
 
     <build>
@@ -56,9 +56,9 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>bintray-nlesc-tycho-knime-node-archetype</id>
-            <name>nlesc-tycho-knime-node-archetype</name>
-            <url>https://api.bintray.com/maven/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/;publish=1</url>
+            <id>bintray-nlesc-knime-python-node-archetype</id>
+            <name>nlesc-knime-node-archetype</name>
+            <url>https://api.bintray.com/maven/nlesc/knime-python-node-archetype/knime-python-node-archetype/;publish=1</url>
         </repository>
     </distributionManagement>
 </project>

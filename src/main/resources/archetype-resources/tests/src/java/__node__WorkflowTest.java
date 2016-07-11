@@ -2,8 +2,10 @@ package ${package};
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
@@ -14,6 +16,7 @@ import org.knime.core.util.LockFailedException;
 import org.knime.testing.core.TestrunConfiguration;
 
 import nl.esciencecenter.e3dchem.knime.testing.TestFlowRunner;
+import nl.esciencecenter.e3dchem.python.PythonWrapperTestUtils;
 
 public class ${node}WorkflowTest {
     @Rule
@@ -27,6 +30,11 @@ public class ${node}WorkflowTest {
         runConfiguration.setReportDeprecatedNodes(true);
         runConfiguration.setCheckMemoryLeaks(true);
         runner = new TestFlowRunner(collector, runConfiguration);
+    }
+
+    @BeforeClass
+    public static void setUpPythonUtils() throws MalformedURLException, IOException {
+        PythonWrapperTestUtils.materializeKNIMEPythonUtils();
     }
 
     @Test

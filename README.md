@@ -1,10 +1,8 @@
-# Tycho Knime node archetype
-
-[![Build Status](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype)
-[ ![Download](https://api.bintray.com/packages/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/images/download.svg) ](https://bintray.com/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/_latestVersion)
-[![DOI](https://zenodo.org/badge/19641/3D-e-Chem/knime-python-wrapper.svg)](https://zenodo.org/badge/latestdoi/19641/3D-e-Chem/knime-python-wrapper)
+# Knime Python node archetype
 
 Generates [Knime](http://www.knime.org) workflow node skeleton repository with sample code.
+The node executes a Python script which is included in the skeleton.
+The script uses dictionary for dialog options and [Pandas](http://pandas.pydata.org/) DataFrames as input and output.
 
 This archetype was made because the instructions to create Knime nodes at https://tech.knime.org/developer-guide, requires interaction with Eclipse wizards. We wanted a way to start and perform node development from the command line and headless.
 Knime nodes are Eclipse plugins. The [Tycho](https://eclipse.org/tycho/) Maven plugin is used to build and handle dependencies of Eclipse plugins, so we use Tycho for Knime node building.
@@ -17,6 +15,8 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 * /feature/ - eclipse feature
 * /p2/ - eclipse update site
 
+The Knime node will execute a Python script called `/plugin/src/<package>/<node>.py`.
+
 ## Requirements
 
 * Java >=1.8
@@ -27,9 +27,9 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 1. Execute
 ```
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
--DarchetypeArtifactId=tycho-knime-node-archetype \
+-DarchetypeArtifactId=knime-python-node-archetype \
 -DarchetypeVersion=1.2.0 \
--DarchetypeRepository=https://dl.bintray.com/nlesc/tycho-knime-node-archetype
+-DarchetypeRepository=https://dl.bintray.com/nlesc/knime-python-node-archetype
 ```
 2. Enter the groupId
 3. Enter the artifactId
@@ -38,9 +38,11 @@ mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 6. Enter the Github organization name or Github username
 7. Enter the Github repository name
 8. Enter the Knime node name
-9. Confirm
-10. Change directory to generated code.
-11. Fill in all placeholders (`[Enter ... here.]`) in
+9. Enter the Python script file name (must be given without .py extension)
+10. Enter the required Python package name
+11. Confirm
+12. Change directory to generated code.
+13. Fill in all placeholders (`[Enter ... here.]`) in
 
     * plugin/META-INF/MANIFEST.MF
     * plugin/src/**/*.xml
@@ -67,4 +69,4 @@ To deploy current version to Bintray.
 
 ## Attribution
 
-The https://github.com/open-archetypes/tycho-eclipse-plugin-archetype was used as inspiration for this archetype.
+The https://github.com/3D-e-Chem/tycho-knime-node-archetype was used as a starting point of this archetype.

@@ -15,6 +15,8 @@
       <requiredProperty key="github_organization"/>
       <requiredProperty key="github_repository"/>
       <requiredProperty key="node"/>
+      <requiredProperty key="python_script_filename"/>
+      <requiredProperty key="required_python_package"/>
     </requiredProperties>
   <fileSets>
     <fileSet filtered="true" encoding="UTF-8">
@@ -39,6 +41,7 @@
           <directory>src/java</directory>
           <includes>
             <include>**/*.java</include>
+            <include>**/*.py</include>
             <include>**/*.xml</include>
           </includes>
         </fileSet>

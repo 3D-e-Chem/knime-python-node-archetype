@@ -21,13 +21,9 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
      */
     protected ${node}Dialog() {
         super();
+        ${node}Config config = new ${node}Config();
 
-        addDialogComponent(new DialogComponentNumber(
-                new SettingsModelIntegerBounded(
-                    ${node}Model.CFGKEY_COUNT,
-                    ${node}Model.DEFAULT_COUNT,
-                    Integer.MIN_VALUE, Integer.MAX_VALUE),
-                    "Counter:", /*step*/ 1, /*componentwidth*/ 5));
-
+        SettingsModelIntegerBounded count = config.getCount();
+        addDialogComponent(new DialogComponentNumber(count, "Counter:", 1, 5));
     }
 }
