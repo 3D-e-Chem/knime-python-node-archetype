@@ -1,5 +1,8 @@
 # Knime Python node archetype
 
+[![Build Status](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype)
+[ ![Download](https://api.bintray.com/packages/nlesc/knime-python-node-archetype/knime-python-node-archetype/images/download.svg) ](https://bintray.com/nlesc/knime-python-node-archetype/knime-python-node-archetype/_latestVersion)
+
 Generates [Knime](http://www.knime.org) workflow node skeleton repository with sample code.
 The node executes a Python script which is included in the skeleton.
 The script uses dictionary for dialog options and [Pandas](http://pandas.pydata.org/) DataFrames as input and output.
@@ -15,7 +18,9 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 * /feature/ - eclipse feature
 * /p2/ - eclipse update site
 
-The Knime node will execute a Python script called `/plugin/src/<package>/<node>.py`.
+The Knime node will execute a Python script called `/plugin/src/<package>/<python script file name>.py`.
+
+See https://github.com/3D-e-Chem/knime-python-wrapper for more information how the Python Wrapper node works.
 
 ## Requirements
 

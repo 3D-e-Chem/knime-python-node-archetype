@@ -5,4 +5,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.0.0] - 2016-07-11
+
+Initial release
+
 Forked from https://github.com/3D-e-Chem/tycho-knime-node-archetype
+
+### Changed
+
+* Refactored KNIME node to a Python Wrapper node (https://github.com/3D-e-Chem/knime-python-wrapper)
