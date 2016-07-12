@@ -18,5 +18,5 @@ before_install:
   - conda install -y -q pandas protobuf
 install:
 - pip install ${required_python_package}
-install: mvn package -B
+- mvn package -B
 script: xvfb-run mvn verify -B
