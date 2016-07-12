@@ -8,6 +8,7 @@ The file is formatted as described on http://keepachangelog.com/.
 ### Changed
 
 * Templatify KNIME test workflow
+* Process Travis-CI config file by template engine
 * Improved development instructions
 
 ## [1.2.0] - 2016-07-11
