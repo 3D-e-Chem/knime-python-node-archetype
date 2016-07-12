@@ -60,6 +60,6 @@ public class ${node}Model extends PythonWrapperNodeModel<${node}Config> {
         // the spec of its output data table(s) (if you can, otherwise an array
         // with null elements), or throw an exception with a useful user message
 
-        return new DataTableSpec[]{null};
+        return super.configure(inSpecs);
     }
 }
