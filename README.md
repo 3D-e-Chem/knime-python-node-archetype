@@ -33,7 +33,7 @@ See https://github.com/3D-e-Chem/knime-python-wrapper for more information how t
 ```
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=knime-python-node-archetype \
--DarchetypeVersion=1.2.0 \
+-DarchetypeVersion=1.2.1 \
 -DarchetypeRepository=https://dl.bintray.com/nlesc/knime-python-node-archetype
 ```
 2. Enter the groupId
@@ -60,7 +60,7 @@ Further instructions about generated project can be found in it's README.md file
 ## New release
 
 1. Adjust version in pom.xml
-2. Update CHANGELOG.md
+2. Update CHANGELOG.md & README.md
 3. Commit & push
 4. Create Github release
 5. Deploy to Bintray, see Deploy chapter below

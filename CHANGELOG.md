@@ -5,6 +5,8 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.2.1] - 2016-07-12
+
 ### Changed
 
 * Templatify KNIME test workflow
