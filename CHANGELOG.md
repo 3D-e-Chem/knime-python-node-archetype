@@ -5,6 +5,8 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.2.2] - 2017-01-24
+
 ### Added
 
 * Instruction to add generated repo to 3D-e-Chem KNIME feature
