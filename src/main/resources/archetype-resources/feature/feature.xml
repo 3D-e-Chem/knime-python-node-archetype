@@ -4,7 +4,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="${parentArtifactId}.feature"
-      label="KNIME ${node} node"
+      label="${parentArtifactId} Feature"
       version="${version}"
       provider-name="[Enter provider name here.]">
 

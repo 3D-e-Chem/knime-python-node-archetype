@@ -1,7 +1,7 @@
 # Knime Python node archetype
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype)
-[ ![Download](https://api.bintray.com/packages/nlesc/knime-python-node-archetype/knime-python-node-archetype/images/download.svg) ](https://bintray.com/nlesc/knime-python-node-archetype/knime-python-node-archetype/_latestVersion)
+[![Download](https://api.bintray.com/packages/nlesc/knime-python-node-archetype/knime-python-node-archetype/images/download.svg) ](https://bintray.com/nlesc/knime-python-node-archetype/knime-python-node-archetype/_latestVersion)
 
 Generates [Knime](http://www.knime.org) workflow node skeleton repository with sample code.
 The node executes a Python script which is included in the skeleton.
@@ -33,7 +33,7 @@ See https://github.com/3D-e-Chem/knime-python-wrapper for more information how t
 ```
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=knime-python-node-archetype \
--DarchetypeVersion=1.2.1 \
+-DarchetypeVersion=1.3.0 \
 -DarchetypeRepository=https://dl.bintray.com/nlesc/knime-python-node-archetype
 ```
 2. Enter the groupId
