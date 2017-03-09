@@ -5,6 +5,15 @@
 # 4. Copy markdown code to ./README.md below the Travis-CI badge
 version: 1.0.{build}
 cache: C:\Users\appveyor\.m2
+environment:
+  matrix:
+    - PYTHON_VERSION: 2.7
+      MINICONDA: C:\Miniconda-x64
+init:
+- "ECHO %PYTHON_VERSION% %MINICONDA%"
+install:
+- "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
+- conda install -y -q -c conda-forge pandas protobuf
 build_script:
 - cmd: mvn package -B
 test_script:

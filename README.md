@@ -1,6 +1,7 @@
 # Knime Python node archetype
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype)
+[![Build status](https://ci.appveyor.com/api/projects/status/5dory9qjycepcmcn/branch/master?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/knime-python-node-archetype/branch/master)
 [![Download](https://api.bintray.com/packages/nlesc/knime-python-node-archetype/knime-python-node-archetype/images/download.svg) ](https://bintray.com/nlesc/knime-python-node-archetype/knime-python-node-archetype/_latestVersion)
 
 Generates [Knime](http://www.knime.org) workflow node skeleton repository with sample code.
