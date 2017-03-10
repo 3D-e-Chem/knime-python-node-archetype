@@ -12,14 +12,18 @@ matrix:
  - os: linux
    jdk: oraclejdk8
    script: xvfb-run mvn verify -B
+   env:
+   - INSTALLER=Miniconda-latest-Linux-x86_64.sh
  - os: osx
    osx_image: xcode8.2
    script: Xvfb :5009 & export DISPLAY=:5009 && mvn verify -B
+   env:
+   - INSTALLER=Miniconda-latest-MacOSX-x86_64.sh
 before_install:
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then export JAVA_HOME=$(/usr/libexec/java_home); fi
   - if [ ! -e $HOME/conda/bin/activate ]; then
-    wget -nc https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh;
-    bash Miniconda-latest-Linux-x86_64.sh -f -b -p $HOME/conda;
+    wget -nc https://repo.continuum.io/miniconda/$INSTALLER;
+    bash $INSTALLER -f -b -p $HOME/conda;
     fi
   - source $HOME/conda/bin/activate root
   - conda install -y -q pandas protobuf
