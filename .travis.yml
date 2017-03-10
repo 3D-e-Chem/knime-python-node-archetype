@@ -18,7 +18,7 @@ matrix:
    osx_image: xcode8.2
    script: Xvfb :5009 & export DISPLAY=:5009 && mvn verify -B
    env:
-   - INSTALLER=Miniconda-latest-MacOSX-x86_64.sh
+   - INSTALLER=Miniconda2-latest-MacOSX-x86_64.sh
 before_install:
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then export JAVA_HOME=$(/usr/libexec/java_home); fi
   - if [ ! -e $HOME/conda/bin/activate ]; then
