@@ -30,7 +30,6 @@ public class ${node}Model extends PythonWrapperNodeModel<${node}Config> {
         // TODO one incoming port and one outgoing port is assumed
         super(new PortType[] { BufferedDataTable.TYPE }, new PortType[] { BufferedDataTable.TYPE });
         python_code_filename = "${python_script_filename}.py";
-        required_python_packages = Arrays.asList("${required_python_package}");
     }
 
     @Override

@@ -4,6 +4,8 @@
 Skeleton for Python based KNIME nodes with sample code as described [here](https://tech.knime.org/developer-guide).
 
 [![Build Status](https://travis-ci.org/${github_organization}/${github_repository}.svg?branch=master)](https://travis-ci.org/${github_organization}/${github_repository})
+[![SonarCloud Gate](https://sonarcloud.io/api/badges/gate?key=${groupId}:${artifactId})](https://sonarcloud.io/dashboard?id=${groupId}:${artifactId})
+[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=${groupId}:${artifactId}&metric=coverage)](https://sonarcloud.io/component_measures/domain/Coverage?id=${groupId}:${artifactId})
 
 This project uses [Eclipse Tycho](https://www.eclipse.org/tycho/) to perform build steps.
 
@@ -31,9 +33,12 @@ ${symbol_pound} Usage
 
 ${symbol_pound} Build
 
+To build the node extension and verify the tests run with the following command:
 ```
 mvn verify
 ```
+
+Make sure all code is commited as the snapshot version is determined by git commit timestamp.
 
 An Eclipse update site will be made in `p2/target/repository` directory.
 The update site can be used to perform a local installation.
@@ -43,7 +48,7 @@ ${symbol_pound}${symbol_pound} Continuous Integration
 Configuration files to run Continuous Integration builds on Linux (Travis-CI), OS X (Travis-CI) and Windows (AppVeyor) are present.
 
 See `./.travis.yml` file how to trigger a Travis-CI build for every push or pull request.
-Also see `./.travis.yml` file how to upload coverage to https://www.codacy.com .
+Also see `./.travis.yml` file how to perform a [SonarCloud](https://sonarcloud.io/) analysis and code coverage.
 
 See `./appveyor.yml` file how to run on https://www.appveyor.com .
 
@@ -52,22 +57,35 @@ ${symbol_pound} Development
 Steps to get development environment setup:
 
 1. Download KNIME SDK from https://www.knime.org/downloads/overview
-2. Install/Extract/start KNIME SDK
-3. Start SDK
+2. Install/extract KNIME SDK
+3. Start KNIME SDK
 4. Install m2e (Maven integration for Eclipse) + Test workflows in JUnit + Python wrapper
 
-    1. Goto Help > Install new software ...
-    2. Make sure Update site http://update.knime.org/analytics-platform/${knime_version} and https://3d-e-chem.github.io/updates are in the pull down list otherwise add them
-    3. Select --all sites-- in work with pulldown
-    4. Select m2e (Maven integration for Eclipse)
-    5. Select `Test Knime workflows from a Junit test`
-    6. Select `Splash & node category for 3D-e-Chem KNIME nodes`
-    7. Select `Abstract Python wrapper KNIME node and helpers`
-    8. Install software & restart
+    1. Goto Window -> Preferences -> Install/Update -> Available Software Sites
+    2. Make sure the following Software Sites (or a version of them) are present otherwise add them:
+
+      * http://update.knime.org/analytics-platform/${knime_version}
+      * http://download.eclipse.org/eclipse/updates/4.6
+      * http://download.eclipse.org/releases/neon
+      * https://3d-e-chem.github.io/updates (only required for 3D-e-Chem node)
+
+    3. Goto Help -> Check for updates
+    4. Install any updates found & restart
+    5. Goto Help > Install new software ...
+    6. Select --All Available sites-- in work with pulldown
+    7. Wait for list to be filled, `Pending...` should disappear
+    8. Select the following items:
+
+      * m2e - Maven integration for Eclipse (includes Incubating components)
+      * Test KNIME workflows from a Junit test
+      * Splash & node category for 3D-e-Chem KNIME nodes (only required for 3D-e-Chem node)
+      * Abstract Python wrapper KNIME node and helpers
+
+    9. Install software & restart
 
 5. Import this repo as an Existing Maven project
 
-During import the Tycho Eclipse providers must be installed.
+During import the Tycho Eclipse providers must be installed, Eclipse will ask for your permission.
 
 ${symbol_pound}${symbol_pound} Tests
 
@@ -104,4 +122,3 @@ ${symbol_pound} New release
   1. Correct authors
   2. Correct license
 9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
-

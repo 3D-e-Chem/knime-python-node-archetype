@@ -15,6 +15,7 @@ init:
 install:
 - "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
 - conda install -y -q -c conda-forge pandas protobuf
+- pip install ${required_python_package}
 build_script:
 - cmd: mvn package -B
 test_script:

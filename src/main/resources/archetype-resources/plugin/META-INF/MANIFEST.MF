@@ -1,19 +1,21 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $qversion = $version.replace("-SNAPSHOT", ".qualifier") )
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: [Enter Your Node name here here.]
 Bundle-SymbolicName: ${rootArtifactId}.plugin;singleton:=true
-Bundle-Version: ${version}
+Bundle-Version: ${qversion}
 Bundle-RequiredExecutionEnvironment: JavaSE-$java_version
 Bundle-Activator: ${package}.Activator
 Bundle-Vendor: [Enter Your Company here.]
 Require-Bundle: org.eclipse.core.runtime,
- org.knime.workbench.core,
- org.knime.workbench.repository,
- org.knime.base,
- nl.esciencecenter.e3dchem.python.plugin;bundle-version="[1.0.0,2.0.0)"
+ org.knime.workbench.core;bundle-version="[${knime_version}.0,4.0.0)",
+ org.knime.workbench.repository;bundle-version="[${knime_version}.0,4.0.0)",
+ org.knime.base;bundle-version="[${knime_version}.0,4.0.0)",
+ nl.esciencecenter.e3dchem.python.plugin;bundle-version="[2.0.0,3.0.0)"
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
+Import-Package: org.knime.python2.config
 Export-Package: ${package}
