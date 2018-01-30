@@ -22,7 +22,6 @@ import nl.esciencecenter.e3dchem.python.PythonOptionsPanel;
  */
 public class ${node}Dialog extends DefaultNodeSettingsPane {
 	private PythonOptionsPanel<${node}Config> pythonOptions;
-	private ${node}Config config;
 
     /**
      * New pane for configuring ${node} node dialog.
@@ -31,7 +30,7 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
      */
     protected ${node}Dialog() {
         super();
-        config = new ${node}Config();
+		${node}Config config = new ${node}Config();
 
         SettingsModelIntegerBounded count = config.getCount();
         addDialogComponent(new DialogComponentNumber(count, "Counter", 1, 5));
@@ -44,6 +43,7 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
 	public void loadAdditionalSettingsFrom(NodeSettingsRO settings, PortObjectSpec[] specs)
 			throws NotConfigurableException {
 		super.loadAdditionalSettingsFrom(settings, specs);
+		${node}Config config = new ${node}Config();
 		try {
 			config.loadFrom(settings);
 		} catch (InvalidSettingsException e) {
@@ -56,6 +56,7 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
 	public void loadAdditionalSettingsFrom(NodeSettingsRO settings, DataTableSpec[] specs)
 			throws NotConfigurableException {
 		super.loadAdditionalSettingsFrom(settings, specs);
+		${node}Config config = new ${node}Config();
 		try {
 			config.loadFrom(settings);
 		} catch (InvalidSettingsException e) {
@@ -67,6 +68,7 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
 	@Override
 	public void saveAdditionalSettingsTo(NodeSettingsWO settings) throws InvalidSettingsException {
 		super.saveAdditionalSettingsTo(settings);
+		${node}Config config = new ${node}Config();
 		pythonOptions.saveSettingsTo(config);
 		config.saveTo(settings);
 	}
