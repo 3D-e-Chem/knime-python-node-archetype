@@ -31,7 +31,7 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
      */
     protected ${node}Dialog() {
         super();
-        ${node}Config config = new ${node}Config();
+        config = new ${node}Config();
 
         SettingsModelIntegerBounded count = config.getCount();
         addDialogComponent(new DialogComponentNumber(count, "Counter", 1, 5));

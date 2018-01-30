@@ -7,8 +7,8 @@ version: 1.0.{build}
 cache: C:\Users\appveyor\.m2
 environment:
   matrix:
-    - PYTHON_VERSION: 2.7
-      MINICONDA: C:\Miniconda-x64
+    - PYTHON_VERSION: 3.6
+      MINICONDA: C:\Miniconda3-x64
 init:
 - mvn --version
 - "ECHO %PYTHON_VERSION% %MINICONDA%"

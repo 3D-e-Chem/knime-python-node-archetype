@@ -42,7 +42,7 @@
 <entry key="7" type="xstring" value="1.0"/>
 <entry key="8" type="xstring" value="2"/>
 </config>
-<entry key="rowIdPrefix" type="xstring" value=""/>
+<entry key="rowIdPrefix" type="xstring" value="Row"/>
 <entry key="rowIdSuffix" type="xstring" value=""/>
 <entry key="rowIdStartValue" type="xint" value="0"/>
 <entry key="highlightOutputTable" type="xboolean" value="false"/>
@@ -105,12 +105,12 @@
 <entry key="node-name" type="xstring" value="Table Creator"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
 <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
-<entry key="node-bundle-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
-<entry key="node-bundle-version" type="xstring" value="3.1.2.v201603300837"/>
-<entry key="node-feature-name" type="xstring" value="Lhasa Metabolism Feature"/>
-<entry key="node-feature-symbolic-name" type="xstring" value="org.lhasalimited.knime.metabolism.feature.feature.group"/>
-<entry key="node-feature-vendor" type="xstring" value="Lhasa Limited (http://www.lhasalimited.org)"/>
-<entry key="node-feature-version" type="xstring" value="1.1.0.v201602151519"/>
+<entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-bundle-version" type="xstring" value="3.5.0.v201712011156"/>
+<entry key="node-feature-name" type="xstring" value="KNIME Core"/>
+<entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
+<entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-feature-version" type="xstring" value="3.5.1.v201712211547"/>
 <config key="factory_settings"/>
 <entry key="name" type="xstring" value="Table Creator"/>
 <entry key="hasContent" type="xboolean" value="true"/>
