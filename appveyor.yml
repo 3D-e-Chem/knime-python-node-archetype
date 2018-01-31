@@ -10,6 +10,8 @@ init:
 install:
 - "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
 - conda install -y -q -c conda-forge pandas protobuf
+# KNIME defaults to python3 as executable, but conda only has python.exe, create python3 so tests can use it
+- copy /Y %MINICONDA%\python.exe %MINICONDA%\python3.exe
 build_script:
 - cmd: mvn package -B
 test_script:
