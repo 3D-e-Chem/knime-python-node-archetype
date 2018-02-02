@@ -5,6 +5,8 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+Synced with [tycho-knime-node-archetype v1.5.0](https://github.com/3D-e-Chem/tycho-knime-node-archetype/releases/tag/v1.5.0).
+
 ### Changed
 
 * Upgraded to v2.0.0 of nl.esciencecenter.e3dchem.python.plugin

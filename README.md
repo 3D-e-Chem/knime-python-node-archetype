@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype)
 [![Build status](https://ci.appveyor.com/api/projects/status/5dory9qjycepcmcn/branch/master?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/knime-python-node-archetype/branch/master)
 [![Download](https://api.bintray.com/packages/nlesc/knime-python-node-archetype/knime-python-node-archetype/images/download.svg) ](https://bintray.com/nlesc/knime-python-node-archetype/knime-python-node-archetype/_latestVersion)
+[![DOI](https://zenodo.org/badge/63080247.svg)](https://zenodo.org/badge/latestdoi/63080247)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
 The node executes a Python script which is included in the skeleton.
@@ -28,7 +29,8 @@ See https://github.com/3D-e-Chem/knime-python-wrapper for more information how t
 * Java >=1.8
 * Maven >=3.0
 
-The archetype is hosted on a BinTray repository. Maven does not resolve to this BinTray repository by default so it must be added.
+The archetype is hosted on a [BinTray repository](https://dl.bintray.com/nlesc/knime-python-node-archetyp).
+Maven does not resolve to this BinTray repository by default so it must be added.
 
 The ~/.m2/settings.xml should contain the following profile:
 
@@ -112,8 +114,9 @@ Further instructions about generated project can be found in it's README.md file
 1. Adjust version in pom.xml
 2. Update CHANGELOG.md & README.md & archetype-catalog.xml
 3. Commit & push
-4. Create Github release
-5. Deploy to Bintray, see Deploy chapter below
+4. Create GitHub release
+5. Correct License in the Zenodo entry and publish the entry
+6. Deploy to Bintray, see Deploy chapter below
 
 ### Deploy
 
