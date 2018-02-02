@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor
-	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-	name="knime.node.archetype"
-	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="knime.node.archetype" 
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<requiredProperties>
 		<requiredProperty key="tycho_version">
@@ -19,6 +17,9 @@
 		<requiredProperty key="node" />
 		<requiredProperty key="python_script_filename" />
 		<requiredProperty key="required_python_package" />
+		<requiredProperty key="vendor">
+			<defaultValue>Netherlands eScience Center</defaultValue>
+		</requiredProperty>
 	</requiredProperties>
 	<fileSets>
 		<fileSet filtered="true" encoding="UTF-8">
@@ -39,8 +40,7 @@
 		</fileSet>
 	</fileSets>
 	<modules>
-		<module id="${rootArtifactId}.plugin" dir="plugin"
-			name="${rootArtifactId}.plugin">
+		<module id="${rootArtifactId}.plugin" dir="plugin" name="${rootArtifactId}.plugin">
 			<fileSets>
 				<fileSet filtered="true" packaged="true" encoding="UTF-8">
 					<directory>src/java</directory>
@@ -71,8 +71,7 @@
 				</fileSet>
 			</fileSets>
 		</module>
-		<module id="${rootArtifactId}.feature" dir="feature"
-			name="${rootArtifactId}.feature">
+		<module id="${rootArtifactId}.feature" dir="feature" name="${rootArtifactId}.feature">
 			<fileSets>
 				<fileSet filtered="true" encoding="UTF-8">
 					<directory></directory>
@@ -93,8 +92,7 @@
 				</fileSet>
 			</fileSets>
 		</module>
-		<module id="${rootArtifactId}.tests" dir="tests"
-			name="${rootArtifactId}.tests">
+		<module id="${rootArtifactId}.tests" dir="tests" name="${rootArtifactId}.tests">
 			<fileSets>
 				<fileSet filtered="true" packaged="true" encoding="UTF-8">
 					<directory>src/java</directory>

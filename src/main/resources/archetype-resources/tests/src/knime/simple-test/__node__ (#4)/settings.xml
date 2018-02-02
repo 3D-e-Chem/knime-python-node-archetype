@@ -33,13 +33,13 @@
 <entry key="state" type="xstring" value="CONFIGURED"/>
 <entry key="factory" type="xstring" value="${package}.${node}Factory"/>
 <entry key="node-name" type="xstring" value="${node}"/>
-<entry key="node-bundle-name" type="xstring" value="[Enter Your Node name here here.]"/>
-<entry key="node-bundle-symbolic-name" type="xstring" value="foo.bar.knime.plugin"/>
-<entry key="node-bundle-vendor" type="xstring" value="[Enter Your Company here.]"/>
+<entry key="node-bundle-name" type="xstring" value="${node}"/>
+<entry key="node-bundle-symbolic-name" type="xstring" value="${rootArtifactId}.plugin"/>
+<entry key="node-bundle-vendor" type="xstring" value="${vendor}"/>
 <entry key="node-bundle-version" type="xstring" value="1.0.0"/>
-<entry key="node-feature-name" type="xstring" value="foo.bar.knime Feature"/>
-<entry key="node-feature-symbolic-name" type="xstring" value="${artifactId}.feature.feature.group"/>
-<entry key="node-feature-vendor" type="xstring" value="[Enter provider name here.]"/>
+<entry key="node-feature-name" type="xstring" value="${parentArtifactId} Feature"/>
+<entry key="node-feature-symbolic-name" type="xstring" value="${parentArtifactId}.feature.feature.group"/>
+<entry key="node-feature-vendor" type="xstring" value="${vendor}"/>
 <entry key="node-feature-version" type="xstring" value="1.0.0"/>
 <config key="factory_settings"/>
 <entry key="name" type="xstring" value="${node}"/>
