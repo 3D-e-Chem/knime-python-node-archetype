@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.esciencecenter</groupId>
     <artifactId>knime-python-node-archetype</artifactId>
-    <version>1.3.0</version>
+    <version>1.4.0</version>
     <name>Archetype - KNIME Python node</name>
     <packaging>maven-archetype</packaging>
     <licenses>
