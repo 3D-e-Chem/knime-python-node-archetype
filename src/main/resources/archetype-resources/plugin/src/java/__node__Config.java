@@ -27,14 +27,28 @@ public class ${node}Config extends PythonWrapperNodeConfig {
                     ${node}Config.DEFAULT_COUNT,
                     Integer.MIN_VALUE, Integer.MAX_VALUE);
 
+    public ${node}Config(String[] inputTables, String[] outputTables) {
+		super(inputTables, outputTables);
+		// this Python package will be checked before executing the node
+		addRequiredModule("${required_python_package}");
+	}
+
+	public ${node}Config() {
+		super();
+		// this Python package will be checked before executing the node
+		addRequiredModule("${required_python_package}");
+	}
+
     @Override
     public void saveTo(final NodeSettingsWO settings) {
+        super.saveTo(settings);
         m_count.saveSettingsTo(settings);
     }
 
     @Override
     public void loadFrom(final NodeSettingsRO settings) throws InvalidSettingsException {
         m_count.loadSettingsFrom(settings);
+        super.loadFrom(settings);
     }
 
     @Override

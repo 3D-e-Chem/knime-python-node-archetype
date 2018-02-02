@@ -17,7 +17,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.8</version>
+				<version>0.8.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -39,7 +39,7 @@
 					<dependency>
 						<groupId>org.jacoco</groupId>
 						<artifactId>org.jacoco.ant</artifactId>
-						<version>0.7.8</version>
+						<version>0.8.0</version>
 					</dependency>
 					<dependency>
 						<groupId>ant-contrib</groupId>
@@ -119,6 +119,7 @@
 		<!-- kill test JVM if tests take more than 1 minute (60 seconds) to finish -->
 		<surefire.timeout>60</surefire.timeout>
 		<custom.UIThread>true</custom.UIThread>
+		<sonar.skip>true</sonar.skip>
 	</properties>
 	<profiles>
 		<profile>
