@@ -7,7 +7,6 @@ import org.knime.core.data.def.IntCell;
 import org.knime.core.data.def.StringCell;
 import org.knime.core.node.BufferedDataTable;
 import org.knime.core.node.InvalidSettingsException;
-import org.knime.core.node.NodeLogger;
 import org.knime.core.node.port.PortType;
 
 import nl.esciencecenter.e3dchem.python.PythonWrapperNodeModel;
@@ -17,10 +16,6 @@ import nl.esciencecenter.e3dchem.python.PythonWrapperNodeModel;
  *
  */
 public class ${node}Model extends PythonWrapperNodeModel<${node}Config> {
-    // the logger instance
-    private static final NodeLogger logger = NodeLogger
-            .getLogger(${node}Model.class);
-
     /**
      * Constructor for the node model.
      */
