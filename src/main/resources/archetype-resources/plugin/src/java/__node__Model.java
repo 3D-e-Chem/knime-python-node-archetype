@@ -1,7 +1,5 @@
 package ${package};
 
-import java.util.Arrays;
-
 import org.knime.core.data.DataColumnSpecCreator;
 import org.knime.core.data.DataTableSpec;
 import org.knime.core.data.def.DoubleCell;
