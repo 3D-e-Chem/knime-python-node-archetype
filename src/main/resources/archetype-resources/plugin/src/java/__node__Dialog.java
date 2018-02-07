@@ -22,6 +22,7 @@ import nl.esciencecenter.e3dchem.python.PythonOptionsPanel;
  */
 public class ${node}Dialog extends DefaultNodeSettingsPane {
 	private PythonOptionsPanel<${node}Config> pythonOptions;
+	${node}Config config;
 
     /**
      * New pane for configuring ${node} node dialog.
@@ -30,7 +31,7 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
      */
     protected ${node}Dialog() {
         super();
-		${node}Config config = new ${node}Config();
+		config = new ${node}Config();
 
         SettingsModelIntegerBounded count = config.getCount();
         addDialogComponent(new DialogComponentNumber(count, "Counter", 1, 5));
@@ -43,12 +44,7 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
 	public void loadAdditionalSettingsFrom(NodeSettingsRO settings, PortObjectSpec[] specs)
 			throws NotConfigurableException {
 		super.loadAdditionalSettingsFrom(settings, specs);
-		${node}Config config = new ${node}Config();
-		try {
-			config.loadFrom(settings);
-		} catch (InvalidSettingsException e) {
-			throw new NotConfigurableException("Unable to load", e);
-		}
+		config.loadFromInDialog(settings);
 		pythonOptions.loadSettingsFrom(config);
 	}
 
@@ -56,20 +52,14 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
 	public void loadAdditionalSettingsFrom(NodeSettingsRO settings, DataTableSpec[] specs)
 			throws NotConfigurableException {
 		super.loadAdditionalSettingsFrom(settings, specs);
-		${node}Config config = new ${node}Config();
-		try {
-			config.loadFrom(settings);
-		} catch (InvalidSettingsException e) {
-			throw new NotConfigurableException("Unable to load", e);
-		}
+		config.loadFromInDialog(settings);
 		pythonOptions.loadSettingsFrom(config);
 	}
 
 	@Override
 	public void saveAdditionalSettingsTo(NodeSettingsWO settings) throws InvalidSettingsException {
 		super.saveAdditionalSettingsTo(settings);
-		${node}Config config = new ${node}Config();
 		pythonOptions.saveSettingsTo(config);
-		config.saveTo(settings);
+		config.saveToInDialog(settings);
 	}
 }
