@@ -26,7 +26,7 @@ See https://github.com/3D-e-Chem/knime-python-wrapper for more information how t
 
 ## Requirements
 
-* Java >=1.8
+* Java ==8
 * Maven >=3.0
 
 The archetype is hosted on a [BinTray repository](https://dl.bintray.com/nlesc/knime-python-node-archetyp).
@@ -61,7 +61,7 @@ The following command will generate a skeleton project
 ```sh
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
   -DarchetypeArtifactId=knime-python-node-archetype \
-  -DarchetypeVersion=1.4.0 \
+  -DarchetypeVersion=2.0.0 \
   -P pythonknimearchetype
 ```
 
@@ -96,26 +96,32 @@ Further instructions about generated project can be found in it's README.md file
 
 ## Generate from inside KNIME SDK
 
-1. Start up the KNIME SDK
-2. Install the `m2e - Maven Integration for Eclipse` software, (you might need to add the add the Eclipse software site which is `http://download.eclipse.org/releases/neon` for the version 3.5.1 of the KNIME SDK)
-3. Register the archetype catalog which contains this archetype
-3.1. Goto Window > Preferences > Maven > Archetypes
-3.2. Add a remove catalog with `https://github.com/3D-e-Chem/knime-python-node-archetype/raw/master/archetype-catalog.xml`
-4. Create a new project based on archetype
-4.1. Goto File > New > Project ... > Maven
-4.2. Select Maven Project & press Next button
-4.3. Use default location & press Next button
-4.4. Select Catalog you added in 3.2
-4.5. Select the archetype with artifact id `knime-python-node-archetype` & press Next button
-4.6. Fill in the form & press Finish button
+1. Install Java 8
+2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-rcp-and-rap-developers)
+3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
+4. Register the archetype catalog which contains this archetype
+
+      1. Goto Window > Preferences > Maven > Archetypes
+      2. Add a remote catalog with `https://github.com/3D-e-Chem/knime-python-node-archetype/raw/master/archetype-catalog.xml`
+
+5. Create a new project based on archetype
+
+      1. Goto File > New > Project ... > Maven
+      2. Select Maven Project & press Next button
+      3. Use default location & press Next button
+      4. Select Catalog you added in step 4.2
+      5. Select the archetype with artifact id `tknime-python-node-archetype` & press Next button
+      6. Fill in the form & press Finish button
+
+Further instructions about generated project can be found in it's README.md file.
 
 ## New release
 
 1. Adjust version in pom.xml
-2. Update CHANGELOG.md & README.md & archetype-catalog.xml
+2. Update CHANGELOG.md & README.md & archetype-catalog.xml & CITATION.cff
 3. Commit & push
-4. Create GitHub release
-5. Correct License in the Zenodo entry and publish the entry
+4. Test archetype by running `mvn verify`
+5. Create GitHub release
 6. Deploy to Bintray, see Deploy chapter below
 
 ### Deploy
@@ -125,11 +131,13 @@ To deploy current version to Bintray.
 1. Add bintray API key to [~/.m2/settings.xml](https://maven.apache.org/settings.html)
 
 ```
-<server>
-    <id>bintray-nlesc-knime-python-node-archetype</id>
-    <username>************</username>
-    <password>********************************</password>
-</server>
+<servers>
+    <server>
+        <id>bintray-nlesc-knime-python-node-archetype</id>
+        <username>************</username>
+        <password>********************************</password>
+    </server>
+<servers>
 ```
 
 2. Run `mvn deploy`

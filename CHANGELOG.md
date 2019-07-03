@@ -5,6 +5,18 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [2.0.0] - 2019-07-03
+
+### Added
+
+* CITATION.cff and .zenodo.json files, for better citation support
+
+### Changed
+
+* Requires KNIME version 4 ([#2](https://github.com/3D-e-Chem/knime-python-node-archetype/issues/2))
+* Switched from KNIME SDK to Eclipse + target platform
+* Source jars for plugin have been replaced with source reference in MANIFEST.MF
+
 ## [1.4.0] - 2018-02-07
 
 Synced with [tycho-knime-node-archetype v1.5.0](https://github.com/3D-e-Chem/tycho-knime-node-archetype/releases/tag/v1.5.0).
