@@ -110,7 +110,7 @@ Further instructions about generated project can be found in it's README.md file
       2. Select Maven Project & press Next button
       3. Use default location & press Next button
       4. Select Catalog you added in step 4.2
-      5. Select the archetype with artifact id `tknime-python-node-archetype` & press Next button
+      5. Select the archetype with artifact id `knime-python-node-archetype` & press Next button
       6. Fill in the form & press Finish button
 
 Further instructions about generated project can be found in it's README.md file.
