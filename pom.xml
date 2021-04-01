@@ -75,10 +75,10 @@
         </pluginManagement>
     </build>
     <distributionManagement>
-        <repository>
-            <id>bintray-nlesc-knime-python-node-archetype</id>
-            <name>nlesc-knime-node-archetype</name>
-            <url>https://api.bintray.com/maven/nlesc/knime-python-node-archetype/knime-python-node-archetype/;publish=1</url>
-        </repository>
-    </distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/3D-e-Chem/knime-python-node-archetype</url>
+		</repository>
+	</distributionManagement>
 </project>

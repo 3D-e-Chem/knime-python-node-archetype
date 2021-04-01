@@ -29,7 +29,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- the report goal of jacoco-maven-plugin plugin shows coverage of tests. 
+			<!-- the report goal of jacoco-maven-plugin plugin shows coverage of tests.
 				To get coverage of ../plugin/java/src/ use the jacoco ant reporter. See https://intellectualcramps.wordpress.com/2012/03/22/jacoco-tycho-and-coverage-reports/ -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -112,6 +112,27 @@
 					<useUIThread>${custom.UIThread}</useUIThread>
 				</configuration>
 
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<dependency-resolution>
+						<extraRequirements>
+							<requirement>
+								<type>eclipse-feature</type>
+								<id>org.knime.features.core</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-feature</type>
+								<id>org.knime.features.testing.application</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+						</extraRequirements>
+					</dependency-resolution>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

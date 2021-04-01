@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="knime.node.archetype" 
-	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" 
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="knime.node.archetype"
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<requiredProperties>
 		<requiredProperty key="tycho_version">
@@ -10,7 +10,7 @@
 			<defaultValue>1.8</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="knime_version">
-        <defaultValue>4.0</defaultValue>
+        <defaultValue>4.3</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="github_organization" />
 		<requiredProperty key="github_repository" />
