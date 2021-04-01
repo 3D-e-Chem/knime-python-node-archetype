@@ -14,7 +14,7 @@
 <unit id="org.knime.features.js.quickforms.feature.group" version="0.0.0"/>
 <unit id="org.knime.features.json.feature.group" version="0.0.0"/>
 <unit id="org.knime.features.personalproductivity.feature.group" version="0.0.0"/>
-<unit id="org.knime.features.testingapplication.feature.group" version="0.0.0"/>
+<unit id="org.knime.features.testing.application.feature.group" version="0.0.0"/>
 <unit id="org.knime.features.xml.feature.group" version="0.0.0"/>
 <unit id="org.knime.features.python2.feature.group" version="0.0.0"/>
 <unit id="org.knime.targetPlatform.feature.group" version="0.0.0"/>
@@ -33,7 +33,7 @@
 -Dsun.java2d.d3d=false
 -Dosgi.classloader.lock=classname
 -XX:+UnlockDiagnosticVMOptions
--XX:+UnsyncloadClass 
+-XX:+UnsyncloadClass
 -XX:+UseG1GC
 -ea
 -Dorg.eclipse.swt.internal.gtk.cairoGraphics=false

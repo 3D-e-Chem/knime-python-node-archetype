@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype)
 [![Build status](https://ci.appveyor.com/api/projects/status/5dory9qjycepcmcn/branch/master?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/knime-python-node-archetype/branch/master)
-[![Download](https://api.bintray.com/packages/nlesc/knime-python-node-archetype/knime-python-node-archetype/images/download.svg) ](https://bintray.com/nlesc/knime-python-node-archetype/knime-python-node-archetype/_latestVersion)
 [![DOI](https://zenodo.org/badge/63080247.svg)](https://zenodo.org/badge/latestdoi/63080247)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
@@ -29,8 +28,8 @@ See https://github.com/3D-e-Chem/knime-python-wrapper for more information how t
 * Java ==8
 * Maven >=3.0
 
-The archetype is hosted on a [BinTray repository](https://dl.bintray.com/nlesc/knime-python-node-archetyp).
-Maven does not resolve to this BinTray repository by default so it must be added.
+The archetype is hosted on a [GitHub packages repository](https://github.com/orgs/3D-e-Chem/packages?repo_name=tycho-knime-node-archetype).
+Maven does not resolve to this GitHub packages repository by default so it must be added.
 
 The ~/.m2/settings.xml should contain the following profile:
 
@@ -45,8 +44,8 @@ The ~/.m2/settings.xml should contain the following profile:
       <id>pythonknimearchetype</id>
       <repositories>
         <repository>
-          <id>python-knime-archetype</id>
-          <url>https://dl.bintray.com/nlesc/knime-python-node-archetype</url>
+          <id>archetype</id>
+          <url>https://maven.pkg.github.com/3D-e-Chem</url>
         </repository>
       </repositories>
     </profile>
@@ -126,21 +125,11 @@ Further instructions about generated project can be found in it's README.md file
 
 ### Deploy
 
-To deploy current version to Bintray.
+To deploy current version to GitHub Packages.
 
-1. Add bintray API key to [~/.m2/settings.xml](https://maven.apache.org/settings.html)
-
-```
-<servers>
-    <server>
-        <id>bintray-nlesc-knime-python-node-archetype</id>
-        <username>************</username>
-        <password>********************************</password>
-    </server>
-<servers>
-```
-
-2. Run `mvn deploy`
+0. Create personal access token with write:packages scope
+1. Create [~/.m2/settings.xml](https://docs.github.com/en/packages/guides/configuring-apache-maven-for-use-with-github-packages#authenticating-with-a-personal-access-token)
+2. Run `mvn --batch-mode deploy`
 
 ## Attribution
 

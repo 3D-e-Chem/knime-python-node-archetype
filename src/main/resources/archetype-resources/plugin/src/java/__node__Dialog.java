@@ -44,7 +44,11 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
 	public void loadAdditionalSettingsFrom(NodeSettingsRO settings, PortObjectSpec[] specs)
 			throws NotConfigurableException {
 		super.loadAdditionalSettingsFrom(settings, specs);
-		config.loadFromInDialog(settings);
+		try {
+			config.loadFromInDialog(settings);
+		} catch (InvalidSettingsException e) {
+			// swallow error
+		}
 		pythonOptions.loadSettingsFrom(config);
 	}
 
@@ -52,7 +56,11 @@ public class ${node}Dialog extends DefaultNodeSettingsPane {
 	public void loadAdditionalSettingsFrom(NodeSettingsRO settings, DataTableSpec[] specs)
 			throws NotConfigurableException {
 		super.loadAdditionalSettingsFrom(settings, specs);
-		config.loadFromInDialog(settings);
+		try {
+			config.loadFromInDialog(settings);
+		} catch (InvalidSettingsException e) {
+			// swallow error
+		}
 		pythonOptions.loadSettingsFrom(config);
 	}
 
