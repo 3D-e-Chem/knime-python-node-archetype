@@ -1,3 +1,7 @@
+> # No longer maintained.
+> Only supported for KNIME versions <=4.3,
+> no more changes will be made to this repo as of Nov 2023.
+
 # KNIME Python node archetype
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-python-node-archetype)
